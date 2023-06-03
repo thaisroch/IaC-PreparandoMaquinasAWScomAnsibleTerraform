@@ -21,8 +21,3 @@ resource "aws_instance" "app_server" {
     Name = "Segunda instancia"
   }
 }
-
-
-
-
-# https://developer.hashicorp.com/terraform/tutorials/aws-get-started/aws-build
