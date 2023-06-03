@@ -17,6 +17,12 @@ resource "aws_instance" "app_server" {
   ami           = "ami-03f65b8614a860c29"  #ami-ubuntu-20.04 - (64-bit (x86))
   instance_type = "t2.micro"
   key_name = "PreparandoMaquinasAWScomAnsibleTerraform"
+  user_data = <<-EOF
+                    #!/bin/bash
+                    cd /home/ubuntu
+                    echo "<h1>Entendendo a tag user_data do terraform" > index.html
+                    nohup bushhttp -f -p 8080 &
+                EOF 
   tags = {
     Name = "Terceira instancia"
   }
