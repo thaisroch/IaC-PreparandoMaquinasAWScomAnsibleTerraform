@@ -18,10 +18,10 @@ resource "aws_instance" "app_server" {
   instance_type = "t2.micro"
   key_name = "PreparandoMaquinasAWScomAnsibleTerraform"
   user_data = <<-EOF
-                    #!/bin/bash
-                    cd /home/ubuntu
-                    echo "<h1>Entendendo a tag user_data do terraform" > index.html
-                    nohup bushhttp -f -p 8080 &
+                #!/bin/bash
+                cd /home/ubuntu
+                echo "<h1>Entendendo a tag user_data do terraform</h1>" > index.html
+                nohup busybox httpd -f -p 8080 &
                 EOF 
   tags = {
     Name = "Terceira instancia"
