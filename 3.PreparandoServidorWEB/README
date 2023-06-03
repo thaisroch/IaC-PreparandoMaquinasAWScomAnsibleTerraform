@@ -1,0 +1,7 @@
+# Server WEB
+
+# Test in instance with buybox
+# Create new file with extension HTML
+# $ nohup busybox httpd -f -p 8080 &
+# Acess in brownser with IP_public:PORT
+

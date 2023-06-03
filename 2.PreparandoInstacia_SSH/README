@@ -1,0 +1,5 @@
+# Criando acesso SSH na instancia.
+
+# Add a tag key_name in resource
+# Add a file key.pem in this path.
+# Configure in secury group  the trafic inbound rules and outbound rules.
