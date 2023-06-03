@@ -1,0 +1,9 @@
+- hosts: terraform-ansible
+  tasks:
+  - name: Instalando o python3, virtualenv
+    apt:                                       # apt install
+      pkg:                                     # Pacotes
+      - python3
+      - virtualenv
+      update_cache: yes                        # Atualizar apt update(Repositorios), apt upgrade (Dos pacotes).
+    become: yes                                # Executar como root
