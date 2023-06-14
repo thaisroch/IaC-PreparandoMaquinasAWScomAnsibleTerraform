@@ -16,7 +16,7 @@ provider "aws" {
 resource "aws_instance" "app_server" {
   ami           = "ami-03f65b8614a860c29"  #ami-ubuntu-20.04 - (64-bit (x86))
   instance_type = "t2.micro"
-  key_name = "PreparandoMaquinasAWScomAnsibleTerraform"
+  key_name      = "PreparandoMaquinasAWScomAnsibleTerraform"
   tags = {
     Name = "Segunda instancia"
   }
